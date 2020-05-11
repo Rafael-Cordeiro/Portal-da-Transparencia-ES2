@@ -1,0 +1,58 @@
+<!-- Página principal do site -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Prototipo FrontEnd</title>
+</head>
+<body>
+    <!--
+        A página é dividida em 3 sessões principais. Um cabeçalho, que possui o título,
+        O corpo, aonde possui o conteúdo do protótipo e um rodapé.
+    -->
+    <header>
+        <h1>Lista de usuários</h1>
+    </header>
+    <section>
+        <!-- As 4 divs com seus consecutivos filtros -->
+        <div class="filtro">
+            <div class="campo1"><p><input type="text" name="txtnome" id="nome"> Nome</p></div>
+            <div class="campo2"><p><input type="text" name="txtcargo" id="cargo"> Cargo</p></div>
+        </div>
+        <div class="filtro">
+            <div class="campo1">
+                <p>
+                    <input type="number" class="fxnum" name="idmin" id="idade_min"> Idade mínima<br>
+                    <input type="number" class="fxnum" name="idmax" id="idade_max"> Idade máxima<br>
+                    <button class="aplicavel" id="btnIdade" type="submit">Aplicar filtro de idade</button>
+                </p>
+            </div>
+            <div class="campo2">
+                <p>
+                    <input type="number" class="fxnum" name="salmin" id="sal_min"> Valor Mínimo<br>
+                    <input type="number" class="fxnum" name="salmax" id="sal_max"> Valor Máximo<br>
+                    <button class="aplicavel" id="btnSalario" type="submit">Aplicar filtro de Salário</button>
+                </p>
+            </div>
+        </div>
+        <button id="btn" type="submit">Limpar Filtro</button>
+        <button id="refresh" type="submit">Refresh</button>
+        <div class="container">
+            <table id="tabela"></table>
+                <tbody id="tabcorpo">
+                    <!-- Aqui entra a lista com os resultados -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer onmousemove="backchangeon()" onmouseout="backchangeoff()">
+        <p id="copy">&copy;SCRUM Masters</p>
+        <script>document.querySelector("p#copy").innerHTML+=' \u{1F4BB}'</script>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="filters.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

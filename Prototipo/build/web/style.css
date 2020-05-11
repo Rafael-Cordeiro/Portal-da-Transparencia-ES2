@@ -1,0 +1,128 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');
+
+body {
+    font-family: Arial;
+    background-color: rgb(57, 136, 255);
+}
+
+input:hover, textarea:hover {
+	background-color: #DDDDDD;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 50px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.363);
+}
+
+footer {
+    font-size: 15pt;
+    text-align: center;
+    font-style: italic;
+    width: fit-content;
+    margin: auto;
+}
+
+p {
+    font-family: Arial;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+input#nome {
+    margin-left: 5px;
+}
+
+input.fxnum {
+    width: 50px;
+    margin-left: 5px;
+}
+
+table {
+    font-family: 'Ubuntu Mono', monospace;
+    border-collapse: collapse;
+}
+
+tbody {
+    border-width: 2px;
+    border-style: solid;
+}
+
+tr.datarow {
+    background-color: rgb(189, 189, 189);
+}
+
+td {
+    text-align: center;
+    width: fit-content;
+    border: none;
+    /* border-width: 10px;
+    border-style: solid;
+    border-color: rgb(139, 139, 139); */
+    margin: 0px;
+    padding: 5px;
+}
+
+div.filtro {
+    text-justify: auto;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(218, 218, 218);
+    justify-content: left;
+    margin: 5px;
+}
+
+button.aplicavel {
+    margin-left: 5px;
+}
+
+div.container {
+    margin-top: 20px;
+}
+
+div.campo1 {
+    margin: auto;
+    text-align: left;
+}
+
+div.campo2 {
+    margin: auto;
+    text-align: right;
+}
+
+nav#menu {
+    display: block;
+}
+
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: relative;
+}
+
+nav#menu li {
+    font-family: 'Ubuntu Mono', monospace;
+    display: inline-block;
+    background-color: #DDDDDD;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 0.3s;
+    border-collapse: collapse;
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+}
