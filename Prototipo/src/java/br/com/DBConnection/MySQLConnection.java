@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 public class MySQLConnection {
     public static String status = "Não conectou";
-    public static String url = "jdbc:mysql://localhost:3307/prototipo"; //Revise a porta
+    public static String url = "jdbc:mysql://localhost:3308/prototipo?autoReconnect=true&useSSL=true"; //Revise a porta
     public static String username = "root";
     public static String password = "";
     public static String driverName = "com.mysql.jdbc.Driver";
