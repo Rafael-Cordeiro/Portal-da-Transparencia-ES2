@@ -1,7 +1,7 @@
 
 -- Banco de dados: `transparencia`
 --
-
+-- Criando o banco
 -- --------------------------------------------------------
 create database transparencia;
 use  transparencia;
