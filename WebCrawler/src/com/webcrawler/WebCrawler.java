@@ -1,21 +1,29 @@
 package com.webcrawler;
 
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+import org.jsoup.nodes.Element;
 
 public class WebCrawler {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		final String url = "http://www.transparencia.pmmc.com.br/funcionalismopublico/salarios";
+
 		
 			try {
-				final Document document = Jsoup.connect(url).get();
+				Document document = Jsoup.connect("https://www.imdb.com/list/ls062458414/").userAgent("Mozilla/17.0").get();
+				Elements temp=document.select("div.lister-item-content");
 				
-				System.out.println(document.outerHtml());
+				int i=0;
+				for (Element movieList:temp) 
+				{
+					i++;
+					System.out.println(i+ " "+ movieList.getElementsByTag("a").first().text());
+				}
+				
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
+			
 				e.printStackTrace();
 			}
 
