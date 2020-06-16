@@ -1,0 +1,17 @@
+table#data-path {
+	width: 100%;
+	margin: 20px;
+	border-width: 2px;
+	border-style: solid;
+	position: relative;
+}
+
+table#data-path > thead > tr {
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+}
+
+table#data-path > tbody > tr > td {
+	text-align: center;
+}

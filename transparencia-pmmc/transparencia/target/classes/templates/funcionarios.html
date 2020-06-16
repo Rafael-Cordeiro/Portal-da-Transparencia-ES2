@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html 	xmlns="http://www.w3.org/1999/xhtml" 
+		xmlns:svg="http://www.w3.org/2000/svg"
+		xmlns:th="http://thymeleaf.org"
+	  	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<meta charset="utf-8">
+	<meta charset="viewport" content="width=device-width, initial-scale=1">
+	<title>Transparência Mogi</title>
+	<meta name="description" content="Nutricionista especializada em gestantes, reeducação alimentar e emagrecimento com pessoas de todas as idades."> 	
+	<meta name="keywords" content="Nutricionista, Nutrição, Dieta, Saúde, Fitness, Alimentação, Saudável, Receitas, Jacqueline Plata, Consultório">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="Sixter">
+	<!-- <link href="Css/funcionarios.css" rel="stylesheet" type="text/css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"> -->
+	<link rel="icon" href="icon.ico" type="image/x-icon">
+</head>
+<body>
+
+<!-- ============CABEÇALHO============ -->
+
+	<header>
+		<nav>
+		    <div class="nav-wrapper teal darken-4">
+		      <a href="/" class="brand-logo">Transparência</a>
+		      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		        <li>
+		        	<a href="/" class="waves-effect waves-light btn">
+		        		<i class="material-icons left">home</i>Home
+		        	</a>
+		        </li>
+		        <li>
+					<a href="/funcionarios" class="waves-effect waves-light btn">
+						<i class="material-icons left">people</i>Funcionários
+					</a>
+				</li>
+				<li>
+					<a href="/historico" class="waves-effect waves-light btn">
+						<i class="material-icons left">format_list_bulleted</i>Histórico Salarial
+					</a>
+				</li>
+		      </ul>
+		    </div>
+		</nav>
+	</header>
+	
+<!-- ============CONTEÚDO============ -->
+	
+	<main class="container">
+		<div class="pag">
+			<div>
+				<h1 align="center" style="font-size:40pt">
+					Funcionários
+				</h1>
+				<h2 align="center" style="font-size:20pt">
+					Aqui você encontrará a lista de funcionários atuais da prefeitura e <br>
+					da câmara de Mogi das Cruzes.
+				</h2>
+				
+				<!-- ============ÁREA DE INSERÇÃO DE FILTROS============ -->
+				
+				<section>
+					<div class="col s12">
+				        <div class="row input-field col s10"> <!-- Nome -->
+				        	<i class="material-icons prefix">account_circle</i>
+			            	<input type="text" id="nome" placeholder="Digite o nome do servidor" aria-controls="tbFuncionarios">
+			            	<label for="nome">Nome</label>
+				        </div>
+				        <div class="row"> <!-- Faixa salarial -->
+					        <div class="input-field left col s3"><!-- min -->
+   					        	<i class="material-icons prefix">attach_money</i>
+					        	<input type="number" id="sal-min" placeholder="Insira o valor mínimo" aria-controls="tbFuncionarios">
+					        	<label for="sal-min">Salário mínimo</label>
+					        	
+					        </div>
+					        <div class="input-field left col s3"><!-- max -->
+					        	<input type="number" id="sal-max" placeholder="Insira o valor máximo" aria-controls="tbFuncionarios">
+					        	<label for="sal-max">Salário máximo</label>
+					        </div>
+					        <button id="sal-filter-apply" class="waves-effect waves-light right btn col s4" type="submit">Aplicar filtro de salário</button>
+				        </div>
+    				    <div class="row input-field"> <!-- Cargo -->
+				        	<i class="material-icons prefix">work</i>
+			            	<input type="text" id="cargo" placeholder="Digite o cargo que deseja procurar" aria-controls="tbFuncionarios">
+			            	<label for="cargo">Cargo</label>
+				        </div>
+				        <div class="filtro">
+				        	<!-- Botões esperam eventos javascript -->
+			          	  	<button id="clean-filters" class="waves-effect waves-light btn" type="submit">Limpar Filtros</button>
+			        	</div>
+			    	</div>
+				</section>
+				
+				<!-- inserção acaba aqui -->
+				
+				<!-- Abaixo campo para a tabela de resposta -->
+				
+   				<table id="dataField" class="striped">
+	   				<thead>
+	   				</thead>
+					<tbody>
+					</tbody>
+   				</table>
+   				
+   				<!-- fim do campo da tabela -->
+   				   				
+			  	<ul class="pagination" aria-label="Navegação de página exemplo">
+			    	<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+					    <li class="waves-effect"><a href="#">1</a></li>
+					    <li class="waves-effect"><a href="#">2</a></li>
+					    <li class="waves-effect"><a href="#">3</a></li>
+					<li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+			 	</ul>
+			</div>
+		</div>
+	</main>
+
+<!-- ============RODAPÉ============ -->
+
+    <footer class="page-footer teal darken-4">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col l6 s12">
+                	<h5 class="white-text">Transparência</h5>
+                	<a href=""><img style="width:25%" src="Imagem/logo/ssp.png"></a>
+              	</div>
+	            <div class="col l4 offset-l2 s12">
+	                <h5 class="white-text">Links</h5>
+	                <ul>
+	                	<li><a class="grey-text text-lighten-3" onclick="nolink()" href="#!">GitHub</a></li>
+	                	<li><a class="grey-text text-lighten-3" onclick="nolink()" href="#!">Facebook</a></li>
+	                  	<li><a class="grey-text text-lighten-3" onclick="nolink()" href="#!">Instagram</a></li>
+	                	<li><a class="grey-text text-lighten-3" onclick="nolink()" href="#!">Twitter</a></li>
+	                </ul>
+	            </div>
+            </div>
+        </div>
+       	<div class="footer-copyright">
+          	<div class="container">
+          		© 2020 SCRUM shitposting
+          		<a class="grey-text text-lighten-4 right" onclick="nolink()" href="#!">Mais Links</a>
+          	</div>
+       	</div>
+    </footer>
+    <script>
+    	function nolink() {
+    		alert('no link allowed')
+    	}
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script src="JS/variable-loader.js"></script>
+    <script src="JS/filter-repository.js"></script>
+    <script src="JS/table-repository.js"></script>
+    <script src="JS/data-filter.js"></script>
+</body>
+</html>

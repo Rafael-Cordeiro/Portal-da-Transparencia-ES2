@@ -1,0 +1,263 @@
+/*====RESET====*/
+* {
+	margin:0;
+	padding:0;
+	font-size: 100%;
+	border: none;
+	outline: none;
+	font-weight: 300;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	background-color: #fafafa;
+}
+
+a {
+	text-decoration: none;
+	color:#333;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*====MENU====*/
+nav {
+	position: sticky; 
+	top: 0; 
+	width: 100%; 
+	background-color:#004843; 
+	box-shadow: 0px 9px 10px 0px rgba(94, 94, 94, 0.45); 
+	z-index: 2;
+}
+
+table {
+	width: 100%;
+}
+
+nav table td {
+	background-color:#004843;
+}
+
+.logomenu {
+	width: 150%; 
+	padding: 1% 0% 2% 5%;
+}
+
+nav ul {
+	float: center; 
+	width: 100%; padding: 0px 1% 0px 20%;
+}
+
+nav ul li {
+	list-style: none; 
+	display: inline-block; 
+	padding: 2% 1%; 
+	font-size: 100%; 
+	color:#E6F5F7;  
+	margin-left: 3%;
+}
+
+nav ul li a {
+	color: #E6F5F7;
+}
+
+nav ul li a:hover {
+	color: #51BFB5; 
+	text-decoration: underline;
+}
+
+.svg svg {
+	stroke-width:6px;
+	stroke: #51BFB5;;
+	width: 100%;
+	height: auto;
+	stroke-dasharray: 1200;
+	animation: svganimation 2s linear alternate infinite;
+}
+
+@keyframes svganimation {
+	0% {
+		stroke-dashoffset:1000;
+	}
+	70% {
+		stroke-dashoffset:0;
+	}
+	100% {
+		stroke-dashoffset:0;
+	}
+}
+
+/*=====FUNDO=====*/
+.fundo {
+	width: 100%;
+	height: 70%;
+}
+
+
+/*===== Infos =====*/
+.pag {
+	width: 70%; 
+	height: 700px; 
+	border: 1px; 
+	border-style: solid;  
+	border-radius:20px;  
+	box-shadow: 5px 5px 10px rgba(0,0,0,.363);  
+	border-color: #004843; 
+	position: relative; 
+	float: right; 
+	padding: 2% 2% 3% 2%;
+	margin: 5% 13% 8.9% 5%
+}
+
+.pag i {
+	font-size: 500%;
+	margin-top: -50%; 
+	background-color: #fafafa; 
+	padding: 0px 5%;
+}
+
+.pag h1 {
+	font-family: "futura bk bt"; 
+	font-size: 200%;	
+	color: #333; 
+	margin-top: 1%;
+	text-align: justify;
+}
+
+.pag h2 {
+	margin: 0% 0% 5% 0%;	
+	font-family: arial;	
+	font-size: 100%; 
+	text-align: center; 
+	color: #555;
+	text-align: justify;
+}
+
+.pag nav {
+	width: 15%; 
+	margin-top:50%; 
+	float: right; 
+	background-color:#004843; 
+	z-index: 2;
+	border-radius: 10px;
+}
+
+.pag nav ul {
+	margin-left: -20%;
+}
+
+.filtro {
+	margin-top: -3%; margin-left: 5%;
+}
+
+.filtro button {
+	width:12%; 
+	height: 38px; 
+	background-color:#004843; 
+	vertical-align: middle;
+	display:inline-block; 
+	cursor:pointer; 
+	color:#ffffff; 
+	font-family:Arial; 
+	font-size:15px;
+	text-decoration:none; 
+	text-shadow:0px -1px 5px #C1CEFA; 
+	border:1px solid #004843; 
+	border-radius:10px;
+}
+
+.filtro button:hover {
+	background-color:#9FE3DD;
+	border-color: #9FE3DD; 
+	color:#11625B;
+}
+
+.busca input {
+	height:50px;
+	border: none; 
+	outline: none; 
+	padding-left: 50px;
+	width: 0;
+	position: absolute;
+	top: 17%;
+	left: 1%;
+	background: none; 
+	z-index: 3;
+	transition: width 1s ease-out;cursor: pointer;
+}
+
+.busca input:focus {
+	border: 1px solid #ccc;
+	border-radius: 25px;
+	width: 40%; z-index: 1;
+	transition: width 1s ease-in;
+
+}
+.busca button {
+	height:50px;
+	width: 50px; 
+	background: url('lupa.png')  center no-repeat; 
+	border: none;
+	position: absolute;
+	top: 17%;
+	left: 1%;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.busca button:focus {
+	outline: none;
+}
+
+
+
+/*=====Rodapé=====*/
+footer {
+	width: 100%;
+	height: 5%;
+	background-color: #004843;
+	float: left;
+	padding: 1% 0%;
+
+}
+
+footer table {
+	width: 100%;
+	height: 5%;
+}
+
+footer td {
+	color:#51BFB5; vertical-align: center;
+}
+
+footer i {
+	margin: 3%;
+	color: #fff;
+	width: 10%;
+	height: auto;
+}
+footer a {
+	font-size: 480%;
+}
+
+footer img {
+	width: 25%;
+	height: auto;
+	margin-left: -25%;
+}
+
+
+footer i:hover {
+	transform: scale(0.9);
+}
+
+.logossp:hover {
+	transform: scale(0.9);
+}
